@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>注文一覧</title>
+</head>
+<body>
+    <h1>注文確認</h1>
+    {% for o in orders %}
+        <p>注文: {{ o }}</p>
+    {% endfor %}
+</body>
+</html>
