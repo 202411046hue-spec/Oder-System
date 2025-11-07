@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カフェ注文</title>
+</head>
+<body>
+    <h1>メニュー</h1>
+    <form method="POST" action="/order">
+        {% for item in menu_items %}
+            <button type="submit" name="item" value="{{ item.name }}">
+                {{ item.category }}: {{ item.name }} (¥{{ item.price }})
+            </button><br>
+        {% endfor %}
+    </form>
+</body>
+</html>
